@@ -52,7 +52,7 @@ public class Banco {
 	public boolean transferir(Cuenta origen, Cuenta destino, double monto) {
 		double saldoOrigen = origen.getSaldoActual();
 		// double saldoDestino = destino.getSaldoActual();
-		if (monto > 0 && monto <= saldoOrigen && origen.getId() != destino.getId()) {
+		if (monto > 0 && monto <= saldoOrigen && !origen.getId().equals(destino.getId())) {
 			// RETIRAR DE ORIGEN
 			// double nuevoSaldoOrigen = saldoOrigen - monto;
 			// origen.setSaldoActual(nuevoSaldoOrigen);
